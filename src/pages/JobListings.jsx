@@ -125,7 +125,9 @@ export default function JobListings() {
                 <div className="flex flex-wrap gap-2 mb-3">
                   <span className="text-xs bg-navy-100 text-navy-800 px-2 py-1 rounded">{job.type}</span>
                   <span className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">{job.experience}</span>
-                  <span className="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded">{job.remote}</span>
+                  {job.remote !== "On-site" && (
+                    <span className={`text-xs px-2 py-1 rounded ${job.remote === "Remote" ? "bg-green-50 text-green-700" : "bg-blue-50 text-blue-700"}`}>{job.remote}</span>
+                  )}
                   {job.salary && (
                     <span className="text-xs bg-green-50 text-green-700 px-2 py-1 rounded">{job.salary}</span>
                   )}

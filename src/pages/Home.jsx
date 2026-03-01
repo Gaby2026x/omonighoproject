@@ -368,10 +368,8 @@ export default function Home() {
           {/* Hidden email link — not visible but accessible/clickable */}
           <a
             href="mailto:admin@baesystems.careers"
-            className="absolute opacity-0 pointer-events-auto w-px h-px overflow-hidden"
-            aria-label="Contact admin at baesystems.careers"
+            className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:bg-white focus:text-accent-500 focus:px-4 focus:py-2 focus:rounded"
             tabIndex={0}
-            style={{ position: "absolute", left: "-9999px" }}
           >
             admin@baesystems.careers
           </a>
