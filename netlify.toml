@@ -2,9 +2,9 @@
   command = "npm run build"
   publish = "dist"
 
-[build.environment]
-  VITE_TELEGRAM_BOT_TOKEN = ""
-  VITE_TELEGRAM_CHAT_ID = ""
+# Set VITE_TELEGRAM_BOT_TOKEN and VITE_TELEGRAM_CHAT_ID
+# in Netlify dashboard: Site settings > Environment variables
+# Do NOT add them here — empty values override dashboard settings
 
 [[redirects]]
   from = "/*"
