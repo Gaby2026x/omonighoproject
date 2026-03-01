@@ -1,0 +1,30 @@
+
+function piResponse() {
+		piSetCookie('visitor_id919453', '555759164', 365);
+			piSetCookie('visitor_id919453-hash', 'bdef4eafedd8b85b00ef4f90e0317c7459073584adde3ba71e7869ad15635bdc40f82c88039a1f181a45bce63d3209f5779de14c', 365);
+		
+		if (document.location.protocol != "https:" || (document.location.protocol == "https:" && true)) {
+		var analytics_link = document.location.protocol + "//" + "pi.pardot.com/analytics?";
+		pi.tracker.visitor_id='555759164';
+
+				pi.tracker.visitor_id_sign='bdef4eafedd8b85b00ef4f90e0317c7459073584adde3ba71e7869ad15635bdc40f82c88039a1f181a45bce63d3209f5779de14c';
+		
+				pi.tracker.campaign_id='1320';
+		
+		var variables = 'conly=true';
+		for (property in pi.tracker) {
+					variables += "&" + property + "=" + pi.tracker[property];
+				}
+		var headID = document.getElementsByTagName("head")[0];
+		piScriptObj[piScriptNum] = document.createElement('script');
+		piScriptObj[piScriptNum].type = 'text/javascript';
+		piScriptObj[piScriptNum].src = analytics_link + variables;
+		headID.appendChild(piScriptObj[piScriptNum]);
+		piScriptObj[piScriptNum].onload = function() { return; }
+	}
+	}
+piResponse();
+
+
+
+
