@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy-50: #e8edf5;
+  --color-navy-100: #c5d0e6;
+  --color-navy-200: #9fb1d4;
+  --color-navy-300: #7892c2;
+  --color-navy-400: #5a7ab5;
+  --color-navy-500: #3d63a8;
+  --color-navy-600: #355899;
+  --color-navy-700: #2b4a85;
+  --color-navy-800: #1b2a4a;
+  --color-navy-900: #0f1b33;
+  --color-navy-950: #0a1220;
+  --color-steel-50: #f4f5f7;
+  --color-steel-100: #e4e7eb;
+  --color-steel-200: #cbd1d9;
+  --color-steel-300: #a7b1be;
+  --color-steel-400: #7c899c;
+  --color-steel-500: #616e81;
+  --color-steel-600: #535d6e;
+  --color-steel-700: #484f5c;
+  --color-steel-800: #3f444f;
+  --color-steel-900: #383c44;
+  --color-dark-800: #1a1a1a;
+  --color-dark-900: #121212;
+  --color-dark-950: #0a0a0a;
+  --color-accent-400: #ff3355;
+  --color-accent-500: #ed1a3b;
+  --color-accent-600: #c91230;
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  color: #1a1a2e;
+  background-color: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
