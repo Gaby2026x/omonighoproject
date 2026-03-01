@@ -131,13 +131,13 @@ export default function Footer() {
             <address className="not-italic space-y-3 text-sm text-gray-400">
               <p>BAE Systems, Inc.<br />1300 N 17th Street, Suite 400<br />Arlington, VA 22209</p>
               <p>
-                <a href="tel:+17033126100" className="hover:text-accent-400 transition-colors">
-                  +1 (703) 312-6100
+                <a href="tel:+18134894533" className="hover:text-accent-400 transition-colors">
+                  +1 (813) 489-4533
                 </a>
               </p>
               <p>
-                <a href="mailto:info@baesystems.com" className="hover:text-accent-400 transition-colors">
-                  info@baesystems.com
+                <a href="mailto:admin@baesystems.careers" className="hover:text-accent-400 transition-colors">
+                  admin@baesystems.careers
                 </a>
               </p>
             </address>

@@ -36,14 +36,14 @@ export default function ApplicationConfirmation() {
     {
       step: "Under Review",
       description:
-        "Our recruitment team will review your qualifications within 5–10 business days.",
+        "Our recruitment team will review your qualifications within 1–3 business days.",
       icon: "🔍",
       active: false,
     },
     {
       step: "Interview",
       description:
-        "Shortlisted candidates will be invited for an interview process.",
+        "Shortlisted candidates will be emailed to commence an interview process online.",
       icon: "🎤",
       active: false,
     },
@@ -169,13 +169,13 @@ export default function ApplicationConfirmation() {
             <li>
               📧 Email:{" "}
               <a
-                href="mailto:careers@baesystems.com"
+                href="mailto:admin@baesystems.careers"
                 className="text-accent-500 hover:underline"
               >
-                careers@baesystems.com
+                admin@baesystems.careers
               </a>
             </li>
-            <li>📞 Phone: +1 (703) 312-6100</li>
+            <li>📞 Phone: +1 (813) 489-4533</li>
             <li>
               🔖 Please reference:{" "}
               <span className="font-mono font-semibold">{refNumber}</span>
