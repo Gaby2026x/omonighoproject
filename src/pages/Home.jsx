@@ -86,6 +86,24 @@ export default function Home() {
 
   return (
     <main>
+      {/* Job Application Open Notice */}
+      <section className="bg-green-700 text-white py-4 px-4 lg:px-8">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+          <div className="flex items-center gap-3">
+            <span className="text-2xl">📢</span>
+            <p className="text-sm sm:text-base font-medium">
+              <strong>Now Hiring:</strong> Job applications are open for unemployed individuals. All backgrounds welcome — apply today!
+            </p>
+          </div>
+          <Link
+            to="/careers/jobs"
+            className="shrink-0 bg-white text-green-700 font-semibold text-sm px-5 py-2 rounded hover:bg-green-50 transition-colors"
+          >
+            View Open Positions
+          </Link>
+        </div>
+      </section>
+
       {/* Hero Section */}
       <section className="relative min-h-[80vh] flex items-center bg-dark-900 text-white overflow-hidden">
         {/* Hero background image */}
@@ -133,24 +151,6 @@ export default function Home() {
           </div>
         </div>
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-accent-500" />
-      </section>
-
-      {/* Job Application Open Notice */}
-      <section className="bg-green-700 text-white py-4 px-4 lg:px-8">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
-          <div className="flex items-center gap-3">
-            <span className="text-2xl">📢</span>
-            <p className="text-sm sm:text-base font-medium">
-              <strong>Now Hiring:</strong> Job applications are open for unemployed individuals. All backgrounds welcome — apply today!
-            </p>
-          </div>
-          <Link
-            to="/careers/jobs"
-            className="shrink-0 bg-white text-green-700 font-semibold text-sm px-5 py-2 rounded hover:bg-green-50 transition-colors"
-          >
-            View Open Positions
-          </Link>
-        </div>
       </section>
 
       {/* Business Sectors */}
