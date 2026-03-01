@@ -91,7 +91,7 @@ export default function Home() {
         {/* Hero background image */}
         <div className="absolute inset-0 w-screen left-1/2 -translate-x-1/2">
           <img
-            src="/States_files/BAE8-8-2020_13.jpeg"
+            src="https://www.baesystems.com/.imaging/focalpoint/Banner/2200x660/dam/jcr:42cfcf49-d2c9-40d2-a9c8-22c42e149ebe/BAE8-8-2020_13.jpeg"
             alt=""
             className="w-full h-full object-cover"
           />
@@ -99,6 +99,9 @@ export default function Home() {
         </div>
         <div className="relative max-w-7xl mx-auto px-4 lg:px-8 py-24 w-full">
           <div className="max-w-3xl">
+            <div className="inline-block bg-accent-500 text-white text-sm sm:text-base font-bold px-4 py-2 rounded mb-6 animate-pulse">
+              🔴 HIRING NOW — Apply Today!
+            </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold leading-tight mb-6">
               We Protect Those Who Protect Us
               <span className="text-accent-400">®</span>
@@ -121,7 +124,7 @@ export default function Home() {
                 </svg>
               </a>
               <Link
-                to="/careers"
+                to="/careers/jobs"
                 className="inline-flex items-center justify-center px-8 py-3.5 rounded border border-white/30 hover:bg-white/10 text-white font-semibold transition-colors text-base"
               >
                 Join Our Team
