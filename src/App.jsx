@@ -1,4 +1,4 @@
-import { HashRouter as Router, Routes, Route } from 'react-router-dom'
+import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Home from './pages/Home'
@@ -7,10 +7,13 @@ import JobDetail from './pages/JobDetail'
 import Apply from './pages/Apply'
 import ApplicationConfirmation from './pages/ApplicationConfirmation'
 
-function App() {
+function AppContent() {
+  const location = useLocation()
+  const isHome = location.pathname === '/'
+
   return (
-    <Router>
-      <Header />
+    <>
+      {!isHome && <Header />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/careers/jobs" element={<JobListings />} />
@@ -18,7 +21,15 @@ function App() {
         <Route path="/careers/apply/:id" element={<Apply />} />
         <Route path="/careers/apply/confirmation" element={<ApplicationConfirmation />} />
       </Routes>
-      <Footer />
+      {!isHome && <Footer />}
+    </>
+  )
+}
+
+function App() {
+  return (
+    <Router>
+      <AppContent />
     </Router>
   )
 }
