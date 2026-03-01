@@ -729,7 +729,10 @@ export default function Apply() {
             <button
               type="submit"
               disabled={!requiredValid() || submitting}
-              className="w-full sm:w-auto bg-accent-500 hover:bg-accent-600 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold px-10 py-3 rounded-lg transition-colors text-lg"
+              className="w-full sm:w-auto disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold px-10 py-3 rounded-lg transition-colors text-lg"
+              style={{ backgroundColor: (!requiredValid() || submitting) ? '#ed1a3b' : '#ed1a3b', color: '#fff' }}
+              onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#c91230'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = '#ed1a3b'; }}
             >
               {submitting ? "Submitting…" : "Submit Application"}
             </button>
