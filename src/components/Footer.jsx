@@ -1,23 +1,23 @@
 import { Link } from 'react-router-dom';
 
 const companyLinks = [
-  { label: 'Who We Are', to: '/about' },
-  { label: 'What We Do', to: '/capabilities' },
-  { label: 'Our Businesses', to: '/businesses' },
-  { label: 'Newsroom', to: '/news' },
+  { label: 'Who We Are', href: 'https://www.baesystems.com/en-us/our-company' },
+  { label: 'What We Do', href: 'https://www.baesystems.com/en-us/what-we-do' },
+  { label: 'Our Businesses', href: 'https://www.baesystems.com/en-us/our-businesses' },
+  { label: 'Newsroom', href: 'https://www.baesystems.com/en-us/newsroom' },
 ];
 
 const careerLinks = [
   { label: 'Job Openings', to: '/careers/jobs' },
-  { label: 'Why BAE Systems', to: '/careers' },
-  { label: 'Life at BAE Systems', to: '/careers' },
+  { label: 'Why BAE Systems', href: 'https://www.baesystems.com/en-us/careers' },
+  { label: 'Life at BAE Systems', href: 'https://www.baesystems.com/en-us/careers' },
 ];
 
 const legalLinks = [
-  { label: 'Privacy Policy', to: '/privacy' },
-  { label: 'Terms of Service', to: '/terms' },
-  { label: 'Cookie Policy', to: '/cookies' },
-  { label: 'Accessibility', to: '/accessibility' },
+  { label: 'Privacy Policy', href: 'https://www.baesystems.com/en-us/privacy' },
+  { label: 'Terms of Service', href: 'https://www.baesystems.com/en-us/terms' },
+  { label: 'Cookie Policy', href: 'https://www.baesystems.com/en-us/cookie-policy' },
+  { label: 'Accessibility', href: 'https://www.baesystems.com/en-us/accessibility' },
 ];
 
 export default function Footer() {
@@ -83,9 +83,9 @@ export default function Footer() {
             <ul className="space-y-2">
               {companyLinks.map((link) => (
                 <li key={link.label}>
-                  <Link to={link.to} className="text-sm text-gray-400 hover:text-accent-400 transition-colors">
+                  <a href={link.href} target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 hover:text-accent-400 transition-colors">
                     {link.label}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -97,9 +97,15 @@ export default function Footer() {
             <ul className="space-y-2">
               {careerLinks.map((link) => (
                 <li key={link.label}>
-                  <Link to={link.to} className="text-sm text-gray-400 hover:text-accent-400 transition-colors">
-                    {link.label}
-                  </Link>
+                  {link.href ? (
+                    <a href={link.href} target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 hover:text-accent-400 transition-colors">
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link to={link.to} className="text-sm text-gray-400 hover:text-accent-400 transition-colors">
+                      {link.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -111,9 +117,9 @@ export default function Footer() {
             <ul className="space-y-2">
               {legalLinks.map((link) => (
                 <li key={link.label}>
-                  <Link to={link.to} className="text-sm text-gray-400 hover:text-accent-400 transition-colors">
+                  <a href={link.href} target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 hover:text-accent-400 transition-colors">
                     {link.label}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -147,9 +153,9 @@ export default function Footer() {
             <span className="hidden sm:inline" aria-hidden="true">&middot;</span>
             <p>BAE Systems, Inc. is the U.S. subsidiary of BAE Systems plc</p>
           </div>
-          <Link to="/investors" className="text-gray-500 hover:text-accent-400 transition-colors">
+          <a href="https://www.baesystems.com/en/investors" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-accent-400 transition-colors">
             Investor Relations
-          </Link>
+          </a>
         </div>
       </div>
     </footer>

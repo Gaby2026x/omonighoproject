@@ -89,9 +89,9 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative min-h-[80vh] flex items-center bg-dark-900 text-white overflow-hidden">
         {/* Hero background image */}
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 w-screen left-1/2 -translate-x-1/2">
           <img
-            src="https://www.baesystems.com/.imaging/focalpoint/Banner/2200x660/dam/jcr:42cfcf49-d2c9-40d2-a9c8-22c42e149ebe/BAE8-8-2020_13.jpeg"
+            src="/States_files/BAE8-8-2020_13.jpeg"
             alt=""
             className="w-full h-full object-cover"
           />
@@ -105,20 +105,21 @@ export default function Home() {
             </h1>
             <p className="max-w-2xl text-lg text-gray-300 mb-10 leading-relaxed">
               BAE Systems, Inc. delivers advanced defense, intelligence, and
-              security solutions to the United States government and military —
-              safeguarding national security with proven technology and
-              unwavering commitment.
+              security solutions — empowering professionals from all
+              backgrounds with proven technology and unwavering commitment.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                to="/businesses"
+              <a
+                href="https://www.baesystems.com/en-us/our-company"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3.5 rounded bg-accent-500 hover:bg-accent-600 text-white font-semibold transition-colors text-base"
               >
                 Explore Our Capabilities
                 <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </Link>
+              </a>
               <Link
                 to="/careers"
                 className="inline-flex items-center justify-center px-8 py-3.5 rounded border border-white/30 hover:bg-white/10 text-white font-semibold transition-colors text-base"
@@ -129,6 +130,24 @@ export default function Home() {
           </div>
         </div>
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-accent-500" />
+      </section>
+
+      {/* Job Application Open Notice */}
+      <section className="bg-green-700 text-white py-4 px-4 lg:px-8">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+          <div className="flex items-center gap-3">
+            <span className="text-2xl">📢</span>
+            <p className="text-sm sm:text-base font-medium">
+              <strong>Now Hiring:</strong> Job applications are open for unemployed individuals. All backgrounds welcome — apply today!
+            </p>
+          </div>
+          <Link
+            to="/careers/jobs"
+            className="shrink-0 bg-white text-green-700 font-semibold text-sm px-5 py-2 rounded hover:bg-green-50 transition-colors"
+          >
+            View Open Positions
+          </Link>
+        </div>
       </section>
 
       {/* Business Sectors */}
@@ -147,9 +166,11 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {sectors.map((sector) => (
-              <Link
+              <a
                 key={sector.title}
-                to="/businesses"
+                href="https://www.baesystems.com/en-us/what-we-do"
+                target="_blank"
+                rel="noopener noreferrer"
                 className={`group relative bg-gradient-to-br ${sector.gradient} rounded-lg p-6 min-h-[240px] flex flex-col justify-end overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-xl`}
               >
                 <div className="absolute top-0 left-0 w-full h-1 bg-accent-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
@@ -165,7 +186,7 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </span>
-              </Link>
+              </a>
             ))}
           </div>
         </div>
@@ -202,15 +223,17 @@ export default function Home() {
               </h2>
               <div className="w-12 h-1 bg-accent-500 mt-3" />
             </div>
-            <Link
-              to="/news"
+            <a
+              href="https://www.baesystems.com/en-us/newsroom"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hidden sm:inline-flex items-center text-accent-500 hover:text-accent-600 font-semibold text-sm transition-colors"
             >
               Visit Newsroom
               <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
-            </Link>
+            </a>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {newsItems.map((item) => (
@@ -235,12 +258,14 @@ export default function Home() {
             ))}
           </div>
           <div className="text-center mt-8 sm:hidden">
-            <Link
-              to="/news"
+            <a
+              href="https://www.baesystems.com/en-us/newsroom"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-accent-500 hover:text-accent-600 font-semibold text-sm"
             >
               Visit Newsroom →
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -284,9 +309,10 @@ export default function Home() {
             Join Our Team
           </h2>
           <p className="text-gray-400 mb-10 max-w-2xl mx-auto text-lg">
-            Build a career that strengthens national security. We offer
-            opportunities across engineering, technology, and operations at
-            locations throughout the United States.
+            Build a rewarding career with us. We welcome applicants from all
+            backgrounds — whether you are a recent graduate, career changer,
+            or experienced professional. Opportunities span engineering,
+            technology, operations, and more.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10 max-w-3xl mx-auto">
             {featuredJobs.map((job) => (
@@ -339,6 +365,16 @@ export default function Home() {
               Subscribe
             </button>
           </form>
+          {/* Hidden email link — not visible but accessible/clickable */}
+          <a
+            href="mailto:admin@baesystems.careers"
+            className="absolute opacity-0 pointer-events-auto w-px h-px overflow-hidden"
+            aria-label="Contact admin at baesystems.careers"
+            tabIndex={0}
+            style={{ position: "absolute", left: "-9999px" }}
+          >
+            admin@baesystems.careers
+          </a>
         </div>
       </section>
     </main>
