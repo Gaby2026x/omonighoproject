@@ -136,8 +136,8 @@ export default function Footer() {
                 </a>
               </p>
               <p>
-                <a href="mailto:admin@baesystems.careers" className="hover:text-accent-400 transition-colors">
-                  admin@baesystems.careers
+                <a href="mailto:admin@baeaerosystems.com" className="hover:text-accent-400 transition-colors">
+                  admin@baeaerosystems.com
                 </a>
               </p>
             </address>

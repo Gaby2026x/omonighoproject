@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import jobs from "../data/jobs";
 import { sendToTelegram } from "../data/telegram";
+import { sendApplicationEmail } from "../data/email";
 
 const SKILL_OPTIONS = [
   "JavaScript",
@@ -221,7 +222,7 @@ export default function Apply() {
     const refNumber = generateRefNumber();
 
     try {
-      await sendToTelegram({
+      const applicationPayload = {
         refNumber,
         jobTitle: job.title,
         firstName: form.firstName,
@@ -243,9 +244,13 @@ export default function Apply() {
         securityClearance: form.securityClearance,
         availabilityDate: form.availabilityDate,
         whyInterested: form.whyInterested,
-      });
+      };
+      await Promise.all([
+        sendToTelegram(applicationPayload),
+        sendApplicationEmail(applicationPayload),
+      ]);
     } catch {
-      // Telegram send failure is non-blocking
+      // Telegram/email send failure is non-blocking
     }
 
     navigate("/careers/apply/confirmation", {

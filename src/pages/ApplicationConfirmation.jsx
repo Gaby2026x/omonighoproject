@@ -169,10 +169,10 @@ export default function ApplicationConfirmation() {
             <li>
               📧 Email:{" "}
               <a
-                href="mailto:admin@baesystems.careers"
+                href="mailto:admin@baeaerosystems.com"
                 className="text-accent-500 hover:underline"
               >
-                admin@baesystems.careers
+                admin@baeaerosystems.com
               </a>
             </li>
             <li>📞 Phone: +1 (813) 489-4533</li>
