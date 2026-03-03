@@ -1,28 +1,95 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { useEffect } from 'react'
+import { HashRouter as Router, Routes, Route, useLocation, useNavigate } from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Home from './pages/Home'
-import About from './pages/About'
-import Businesses from './pages/Businesses'
-import Capabilities from './pages/Capabilities'
-import Careers from './pages/Careers'
 import JobListings from './pages/JobListings'
 import JobDetail from './pages/JobDetail'
 import Apply from './pages/Apply'
 import ApplicationConfirmation from './pages/ApplicationConfirmation'
-import News from './pages/News'
-import Contact from './pages/Contact'
-import Investors from './pages/Investors'
-import Privacy from './pages/Privacy'
-import Terms from './pages/Terms'
-import NotFound from './pages/NotFound'
 
-function Layout({ children }) {
+function AppContent() {
+  const location = useLocation()
+  const navigate = useNavigate()
+  const isHome = location.pathname === '/'
+
+  useEffect(() => {
+    if (!isHome) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => { document.body.style.overflow = '' }
+  }, [isHome])
+
+  function handleClose() {
+    navigate('/')
+  }
+
+  if (isHome) return null
+
   return (
-    <div className="flex flex-col min-h-screen">
-      <Header />
-      <main className="flex-grow">{children}</main>
-      <Footer />
+    <div
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        zIndex: 9999,
+        background: 'rgba(0,0,0,0.5)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}
+      onClick={(e) => { if (e.target === e.currentTarget) handleClose() }}
+    >
+      <div
+        style={{
+          background: '#fff',
+          borderRadius: '12px',
+          width: '95vw',
+          maxWidth: '1100px',
+          height: '92vh',
+          overflow: 'auto',
+          position: 'relative',
+          boxShadow: '0 25px 50px rgba(0,0,0,0.3)',
+        }}
+      >
+        <button
+          onClick={handleClose}
+          aria-label="Close"
+          style={{
+            position: 'sticky',
+            top: '12px',
+            float: 'right',
+            marginRight: '12px',
+            zIndex: 10,
+            background: '#1e293b',
+            color: '#fff',
+            border: 'none',
+            borderRadius: '50%',
+            width: '36px',
+            height: '36px',
+            fontSize: '20px',
+            cursor: 'pointer',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            lineHeight: 1,
+          }}
+        >
+          ✕
+        </button>
+        <Header />
+        <Routes>
+          <Route path="/careers/jobs" element={<JobListings />} />
+          <Route path="/careers/jobs/:id" element={<JobDetail />} />
+          <Route path="/careers/apply/:id" element={<Apply />} />
+          <Route path="/careers/apply/confirmation" element={<ApplicationConfirmation />} />
+        </Routes>
+        <Footer />
+      </div>
     </div>
   )
 }
@@ -30,25 +97,7 @@ function Layout({ children }) {
 function App() {
   return (
     <Router>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/businesses" element={<Businesses />} />
-          <Route path="/capabilities" element={<Capabilities />} />
-          <Route path="/careers" element={<Careers />} />
-          <Route path="/careers/jobs" element={<JobListings />} />
-          <Route path="/careers/jobs/:id" element={<JobDetail />} />
-          <Route path="/careers/apply/:id" element={<Apply />} />
-          <Route path="/careers/apply/confirmation" element={<ApplicationConfirmation />} />
-          <Route path="/news" element={<News />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/investors" element={<Investors />} />
-          <Route path="/privacy" element={<Privacy />} />
-          <Route path="/terms" element={<Terms />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Layout>
+      <AppContent />
     </Router>
   )
 }

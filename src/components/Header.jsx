@@ -2,13 +2,12 @@ import { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
 const navItems = [
-  { label: 'Who we are', to: '/about' },
-  { label: 'What we do', to: '/capabilities' },
-  { label: 'Our businesses', to: '/businesses' },
-  { label: 'Newsroom', to: '/news' },
-  { label: 'Careers', to: '/careers' },
-  { label: 'Suppliers', to: '/contact' },
-  { label: 'Contact', to: '/contact' },
+  { label: 'Who we are', href: 'https://www.baesystems.com/en-us/our-company' },
+  { label: 'What we do', href: 'https://www.baesystems.com/en-us/what-we-do' },
+  { label: 'Our businesses', href: 'https://www.baesystems.com/en-us/our-businesses' },
+  { label: 'Newsroom', href: 'https://www.baesystems.com/en-us/newsroom' },
+  { label: 'Careers', to: '/careers/jobs' },
+  { label: 'Contact', href: 'https://www.baesystems.com/en-us/contact' },
 ];
 
 export default function Header() {
@@ -79,11 +78,22 @@ export default function Header() {
           {/* Desktop nav */}
           <div className="hidden items-center gap-6 xl:flex">
             <ul className="flex items-center gap-5" role="list">
-              {navItems.map(({ label, to }) => (
+              {navItems.map(({ label, to, href }) => (
                 <li key={label}>
-                  <NavLink to={to} className={linkClass}>
-                    {label}
-                  </NavLink>
+                  {href ? (
+                    <a
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="relative px-1 py-4 text-sm font-medium tracking-wide transition-colors hover:text-accent-500 text-[#1E1E1E]"
+                    >
+                      {label}
+                    </a>
+                  ) : (
+                    <NavLink to={to} className={linkClass}>
+                      {label}
+                    </NavLink>
+                  )}
                 </li>
               ))}
             </ul>
@@ -141,19 +151,31 @@ export default function Header() {
             className="space-y-1 border-t border-steel-100 px-4 pb-4 pt-2 xl:hidden bg-white"
             role="list"
           >
-            {navItems.map(({ label, to }) => (
+            {navItems.map(({ label, to, href }) => (
               <li key={label}>
-                <NavLink
-                  to={to}
-                  className={({ isActive }) =>
-                    `block rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-steel-50 ${
-                      isActive ? 'text-accent-500 bg-steel-50' : 'text-[#1E1E1E]'
-                    }`
-                  }
-                  onClick={() => setMenuOpen(false)}
-                >
-                  {label}
-                </NavLink>
+                {href ? (
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-steel-50 text-[#1E1E1E]"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    {label}
+                  </a>
+                ) : (
+                  <NavLink
+                    to={to}
+                    className={({ isActive }) =>
+                      `block rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-steel-50 ${
+                        isActive ? 'text-accent-500 bg-steel-50' : 'text-[#1E1E1E]'
+                      }`
+                    }
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    {label}
+                  </NavLink>
+                )}
               </li>
             ))}
           </ul>

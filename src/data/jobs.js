@@ -31,7 +31,7 @@ const jobs = [
     location: "Nashua, NH",
     type: "Full-time",
     experience: "Senior",
-    salary: "$140,000 – $175,000",
+    salary: "$58,000 – $72,000",
     description:
       "Design and develop advanced electronic warfare systems for US defense programs. You will work on cutting-edge radar jamming, signal intelligence, and countermeasure technologies supporting critical national security missions.",
     responsibilities: [
@@ -61,7 +61,7 @@ const jobs = [
     ],
     clearanceRequired: true,
     remote: "On-site",
-    postedDate: "2025-01-10",
+    postedDate: "2026-01-05",
   },
   {
     id: 2,
@@ -70,7 +70,7 @@ const jobs = [
     location: "Arlington, VA",
     type: "Full-time",
     experience: "Mid",
-    salary: "$105,000 – $135,000",
+    salary: "$42,000 – $55,000",
     description:
       "Protect critical defense information systems by monitoring, detecting, and responding to cybersecurity threats. You will support intelligence community customers with advanced threat analysis and incident response capabilities.",
     responsibilities: [
@@ -100,7 +100,7 @@ const jobs = [
     ],
     clearanceRequired: true,
     remote: "Hybrid",
-    postedDate: "2025-01-15",
+    postedDate: "2026-01-07",
   },
   {
     id: 3,
@@ -109,7 +109,7 @@ const jobs = [
     location: "Sterling Heights, MI",
     type: "Full-time",
     experience: "Senior",
-    salary: "$130,000 – $165,000",
+    salary: "$52,000 – $66,000",
     description:
       "Lead systems engineering efforts for the next generation of armored combat vehicles. You will drive the design, integration, and testing of advanced vehicle platforms supporting the US Army’s modernization priorities.",
     responsibilities: [
@@ -138,8 +138,8 @@ const jobs = [
       "Defense Programs",
     ],
     clearanceRequired: true,
-    remote: "On-site",
-    postedDate: "2025-01-22",
+    remote: "Remote",
+    postedDate: "2026-01-08",
   },
   {
     id: 4,
@@ -148,7 +148,7 @@ const jobs = [
     location: "El Segundo, CA",
     type: "Full-time",
     experience: "Mid",
-    salary: "$120,000 – $155,000",
+    salary: "$48,000 – $62,000",
     description:
       "Design and develop satellite communication systems for national security space programs. You will contribute to the engineering of resilient, anti-jam SATCOM solutions for military and intelligence community users.",
     responsibilities: [
@@ -178,7 +178,7 @@ const jobs = [
     ],
     clearanceRequired: true,
     remote: "On-site",
-    postedDate: "2025-02-01",
+    postedDate: "2026-01-10",
   },
   {
     id: 5,
@@ -187,7 +187,7 @@ const jobs = [
     location: "San Diego, CA",
     type: "Full-time",
     experience: "Mid",
-    salary: "$115,000 – $145,000",
+    salary: "$46,000 – $58,000",
     description:
       "Develop mission-critical software for naval combat management systems. You will build real-time embedded applications that power shipboard defense systems for the US Navy.",
     responsibilities: [
@@ -217,16 +217,16 @@ const jobs = [
     ],
     clearanceRequired: true,
     remote: "On-site",
-    postedDate: "2025-02-05",
+    postedDate: "2026-01-12",
   },
   {
     id: 6,
     title: "Supply Chain Program Manager",
     department: "Supply Chain",
     location: "Sterling Heights, MI",
-    type: "Full-time",
+    type: "Part-time",
     experience: "Senior",
-    salary: "$125,000 – $155,000",
+    salary: "$50,000 – $62,000",
     description:
       "Manage end-to-end supply chain operations for major defense vehicle programs. You will oversee procurement, logistics, and supplier performance to ensure on-time delivery of critical defense systems.",
     responsibilities: [
@@ -256,7 +256,7 @@ const jobs = [
     ],
     clearanceRequired: false,
     remote: "On-site",
-    postedDate: "2025-02-10",
+    postedDate: "2026-01-13",
   },
   {
     id: 7,
@@ -265,7 +265,7 @@ const jobs = [
     location: "Austin, TX",
     type: "Full-time",
     experience: "Mid",
-    salary: "$118,000 – $150,000",
+    salary: "$47,000 – $60,000",
     description:
       "Apply advanced data science and machine learning techniques to intelligence analysis problems. You will develop algorithms and models that transform large-scale data into actionable intelligence for national security customers.",
     responsibilities: [
@@ -295,7 +295,7 @@ const jobs = [
     ],
     clearanceRequired: true,
     remote: "Hybrid",
-    postedDate: "2025-02-14",
+    postedDate: "2026-01-14",
   },
   {
     id: 8,
@@ -304,7 +304,7 @@ const jobs = [
     location: "Minneapolis, MN",
     type: "Full-time",
     experience: "Senior",
-    salary: "$120,000 – $150,000",
+    salary: "$48,000 – $60,000",
     description:
       "Oversee manufacturing operations for defense electronics production lines. You will drive operational excellence, lean manufacturing initiatives, and production efficiency for mission-critical electronic systems.",
     responsibilities: [
@@ -334,7 +334,7 @@ const jobs = [
     ],
     clearanceRequired: false,
     remote: "On-site",
-    postedDate: "2025-02-18",
+    postedDate: "2026-01-15",
   },
   {
     id: 9,
@@ -343,7 +343,7 @@ const jobs = [
     location: "El Segundo, CA",
     type: "Full-time",
     experience: "Senior",
-    salary: "$160,000 – $200,000",
+    salary: "$65,000 – $82,000",
     description:
       "Lead business development and capture activities for national security space programs. You will identify and pursue new opportunities with the US Space Force, NRO, and other space-focused government customers.",
     responsibilities: [
@@ -373,7 +373,7 @@ const jobs = [
     ],
     clearanceRequired: true,
     remote: "Hybrid",
-    postedDate: "2025-02-22",
+    postedDate: "2026-01-17",
   },
   {
     id: 10,
@@ -382,7 +382,7 @@ const jobs = [
     location: "Arlington, VA",
     type: "Full-time",
     experience: "Mid",
-    salary: "$95,000 – $120,000",
+    salary: "$38,000 – $48,000",
     description:
       "Serve as a strategic HR partner to business unit leaders across BAE Systems’ US operations. You will drive talent management, workforce planning, and employee engagement initiatives supporting defense programs.",
     responsibilities: [
@@ -411,8 +411,8 @@ const jobs = [
       "Compliance",
     ],
     clearanceRequired: false,
-    remote: "Hybrid",
-    postedDate: "2025-02-28",
+    remote: "Remote",
+    postedDate: "2026-01-19",
   },
   {
     id: 11,
@@ -421,7 +421,7 @@ const jobs = [
     location: "Austin, TX",
     type: "Full-time",
     experience: "Mid",
-    salary: "$110,000 – $140,000",
+    salary: "$44,000 – $56,000",
     description:
       "Design and manage secure cloud infrastructure for defense enterprise applications. You will architect cloud solutions on AWS GovCloud and Azure Government to support mission-critical workloads.",
     responsibilities: [
@@ -451,16 +451,16 @@ const jobs = [
     ],
     clearanceRequired: true,
     remote: "Hybrid",
-    postedDate: "2025-03-01",
+    postedDate: "2026-01-20",
   },
   {
     id: 12,
     title: "Radar Systems Architect",
     department: "Electronic Systems",
     location: "Merrimack, NH",
-    type: "Full-time",
+    type: "Part-time",
     experience: "Senior",
-    salary: "$150,000 – $185,000",
+    salary: "$60,000 – $75,000",
     description:
       "Lead the architectural design of next-generation radar systems for airborne and ground-based defense applications. You will define radar system concepts and drive technology innovation for electronic sensing programs.",
     responsibilities: [
@@ -490,7 +490,7 @@ const jobs = [
     ],
     clearanceRequired: true,
     remote: "On-site",
-    postedDate: "2025-03-03",
+    postedDate: "2026-01-21",
   },
   {
     id: 13,
@@ -499,7 +499,7 @@ const jobs = [
     location: "San Diego, CA",
     type: "Full-time",
     experience: "Mid",
-    salary: "$125,000 – $160,000",
+    salary: "$50,000 – $64,000",
     description:
       "Develop autonomy and robotics software for unmanned defense systems. You will create algorithms for autonomous navigation, path planning, and decision-making for unmanned ground and maritime vehicles.",
     responsibilities: [
@@ -529,7 +529,7 @@ const jobs = [
     ],
     clearanceRequired: true,
     remote: "On-site",
-    postedDate: "2025-03-05",
+    postedDate: "2026-01-22",
   },
   {
     id: 14,
@@ -538,7 +538,7 @@ const jobs = [
     location: "Huntsville, AL",
     type: "Full-time",
     experience: "Mid",
-    salary: "$115,000 – $145,000",
+    salary: "$46,000 – $58,000",
     description:
       "Perform systems analysis and modeling for missile defense programs supporting the Missile Defense Agency. You will evaluate system performance, conduct trade studies, and support the development of integrated missile defense architectures.",
     responsibilities: [
@@ -568,7 +568,7 @@ const jobs = [
     ],
     clearanceRequired: true,
     remote: "On-site",
-    postedDate: "2025-03-07",
+    postedDate: "2026-01-24",
   },
   {
     id: 15,
@@ -577,7 +577,7 @@ const jobs = [
     location: "San Diego, CA",
     type: "Full-time",
     experience: "Mid",
-    salary: "$112,000 – $142,000",
+    salary: "$45,000 – $57,000",
     description:
       "Design and implement secure network architectures for classified defense environments. You will ensure network resilience, perform security hardening, and support accreditation of DoD information systems.",
     responsibilities: [
@@ -606,17 +606,17 @@ const jobs = [
       "Security Accreditation",
     ],
     clearanceRequired: true,
-    remote: "On-site",
-    postedDate: "2025-03-08",
+    remote: "Remote",
+    postedDate: "2026-01-26",
   },
   {
     id: 16,
     title: "Mechanical Design Engineer – Armored Vehicles",
     department: "Platforms & Services",
     location: "Sterling Heights, MI",
-    type: "Full-time",
+    type: "Part-time",
     experience: "Entry",
-    salary: "$75,000 – $95,000",
+    salary: "$32,000 – $40,000",
     description:
       "Design mechanical components and subsystems for armored combat vehicles. You will use 3D CAD tools to create detailed designs for vehicle structures, armor packages, and turret systems.",
     responsibilities: [
@@ -646,7 +646,7 @@ const jobs = [
     ],
     clearanceRequired: false,
     remote: "On-site",
-    postedDate: "2025-03-10",
+    postedDate: "2026-01-27",
   },
   {
     id: 17,
@@ -655,7 +655,7 @@ const jobs = [
     location: "Nashua, NH",
     type: "Full-time",
     experience: "Senior",
-    salary: "$145,000 – $180,000",
+    salary: "$58,000 – $72,000",
     description:
       "Lead the execution of electronic warfare programs from contract award through delivery. You will manage cost, schedule, and technical performance for complex EW system development and production programs.",
     responsibilities: [
@@ -685,7 +685,7 @@ const jobs = [
     ],
     clearanceRequired: true,
     remote: "On-site",
-    postedDate: "2025-03-11",
+    postedDate: "2026-02-01",
   },
   {
     id: 18,
@@ -694,7 +694,7 @@ const jobs = [
     location: "Arlington, VA",
     type: "Full-time",
     experience: "Mid",
-    salary: "$108,000 – $138,000",
+    salary: "$43,000 – $55,000",
     description:
       "Build and maintain enterprise web applications supporting BAE Systems’ internal business operations. You will develop modern full stack solutions using React, Node.js, and cloud-native technologies.",
     responsibilities: [
@@ -724,7 +724,7 @@ const jobs = [
     ],
     clearanceRequired: false,
     remote: "Hybrid",
-    postedDate: "2025-03-12",
+    postedDate: "2026-02-03",
   },
   {
     id: 19,
@@ -733,7 +733,7 @@ const jobs = [
     location: "Huntsville, AL",
     type: "Full-time",
     experience: "Mid",
-    salary: "$100,000 – $130,000",
+    salary: "$40,000 – $52,000",
     description:
       "Plan and execute test and evaluation activities for defense weapon systems. You will design test procedures, collect and analyze test data, and support developmental and operational testing for Army programs.",
     responsibilities: [
@@ -762,8 +762,8 @@ const jobs = [
       "Technical Writing",
     ],
     clearanceRequired: true,
-    remote: "On-site",
-    postedDate: "2025-03-13",
+    remote: "Remote",
+    postedDate: "2026-02-04",
   },
   {
     id: 20,
@@ -772,7 +772,7 @@ const jobs = [
     location: "Merrimack, NH",
     type: "Full-time",
     experience: "Senior",
-    salary: "$140,000 – $175,000",
+    salary: "$58,000 – $72,000",
     description:
       "Design and develop signals intelligence collection and processing systems for national security customers. You will architect SIGINT solutions that intercept, analyze, and exploit electromagnetic signals.",
     responsibilities: [
@@ -802,7 +802,7 @@ const jobs = [
     ],
     clearanceRequired: true,
     remote: "On-site",
-    postedDate: "2025-03-14",
+    postedDate: "2026-02-05",
   },
   {
     id: 21,
@@ -811,7 +811,7 @@ const jobs = [
     location: "Huntsville, AL",
     type: "Full-time",
     experience: "Entry",
-    salary: "$68,000 – $85,000",
+    salary: "$28,000 – $36,000",
     description:
       "Support logistics and sustainment planning for defense systems throughout their lifecycle. You will analyze spare parts requirements, maintenance data, and logistics support to maximize system readiness.",
     responsibilities: [
@@ -841,7 +841,7 @@ const jobs = [
     ],
     clearanceRequired: false,
     remote: "On-site",
-    postedDate: "2025-03-15",
+    postedDate: "2026-02-07",
   },
   {
     id: 22,
@@ -850,7 +850,7 @@ const jobs = [
     location: "El Segundo, CA",
     type: "Full-time",
     experience: "Mid",
-    salary: "$125,000 – $158,000",
+    salary: "$50,000 – $63,000",
     description:
       "Develop flight software and ground systems for national security space missions. You will write safety-critical embedded software for satellite systems and mission control applications.",
     responsibilities: [
@@ -880,7 +880,7 @@ const jobs = [
     ],
     clearanceRequired: true,
     remote: "On-site",
-    postedDate: "2025-03-16",
+    postedDate: "2026-02-09",
   },
   {
     id: 23,
@@ -889,7 +889,7 @@ const jobs = [
     location: "Arlington, VA",
     type: "Full-time",
     experience: "Senior",
-    salary: "$140,000 – $175,000",
+    salary: "$58,000 – $72,000",
     description:
       "Drive business growth by identifying and capturing new Army program opportunities. You will build customer relationships, lead proposal efforts, and develop strategies to expand BAE Systems’ ground vehicle and weapons portfolio.",
     responsibilities: [
@@ -919,7 +919,7 @@ const jobs = [
     ],
     clearanceRequired: true,
     remote: "Hybrid",
-    postedDate: "2025-03-18",
+    postedDate: "2026-02-10",
   },
   {
     id: 24,
@@ -928,7 +928,7 @@ const jobs = [
     location: "Minneapolis, MN",
     type: "Internship",
     experience: "Entry",
-    salary: "$25,000 – $35,000",
+    salary: "$15,000 – $22,000",
     description:
       "Gain hands-on experience in systems engineering supporting defense electronics programs. You will work alongside experienced engineers on requirements analysis, system design, and testing of advanced electronic systems.",
     responsibilities: [
@@ -958,7 +958,163 @@ const jobs = [
     ],
     clearanceRequired: false,
     remote: "On-site",
-    postedDate: "2025-03-20",
+    postedDate: "2026-02-12",
+  },
+  {
+    id: 25,
+    title: "Data Entry Analyst",
+    department: "IT & Digital",
+    location: "Arlington, VA",
+    type: "Part-time",
+    experience: "Entry",
+    salary: "$22,000 – $30,000",
+    description:
+      "Support data management operations by accurately entering, updating, and maintaining records in enterprise databases. This role is ideal for detail-oriented individuals looking for flexible, remote-friendly work.",
+    responsibilities: [
+      "Enter and verify data in enterprise systems with high accuracy",
+      "Review and clean existing data records for consistency",
+      "Generate routine reports and summaries from databases",
+      "Coordinate with team leads to prioritize data entry tasks",
+      "Flag and escalate data discrepancies for resolution",
+    ],
+    requiredQualifications: [
+      "High school diploma or equivalent",
+      "Strong attention to detail and accuracy",
+      "Basic proficiency in Microsoft Office or Google Workspace",
+      "Reliable internet connection for remote work",
+    ],
+    preferredQualifications: [
+      "Experience with data entry or administrative support",
+      "Familiarity with database software or CRM tools",
+      "Typing speed of 50+ words per minute",
+    ],
+    skills: [
+      "Data Entry",
+      "Microsoft Office",
+      "Attention to Detail",
+      "Communication",
+      "Organization",
+    ],
+    clearanceRequired: false,
+    remote: "Remote",
+    postedDate: "2026-02-14",
+  },
+  {
+    id: 26,
+    title: "Virtual Assistant",
+    department: "Business Development",
+    location: "Austin, TX",
+    type: "Part-time",
+    experience: "Entry",
+    salary: "$20,000 – $28,000",
+    description:
+      "Provide remote administrative and organizational support to business development teams. Handle scheduling, correspondence, document preparation, and other tasks to keep operations running smoothly.",
+    responsibilities: [
+      "Manage calendars, schedule meetings, and coordinate logistics",
+      "Draft and proofread emails, memos, and reports",
+      "Organize and maintain digital files and documents",
+      "Conduct basic online research and compile findings",
+      "Assist with travel arrangements and expense tracking",
+    ],
+    requiredQualifications: [
+      "High school diploma or equivalent",
+      "Strong written and verbal communication skills",
+      "Proficiency with email, calendaring, and productivity tools",
+      "Ability to work independently in a remote environment",
+    ],
+    preferredQualifications: [
+      "Prior experience as an administrative or virtual assistant",
+      "Familiarity with project management tools like Trello or Asana",
+      "Associate's degree or coursework in business administration",
+    ],
+    skills: [
+      "Communication",
+      "Organization",
+      "Microsoft Office",
+      "Time Management",
+      "Problem Solving",
+    ],
+    clearanceRequired: false,
+    remote: "Remote",
+    postedDate: "2026-02-17",
+  },
+  {
+    id: 27,
+    title: "Product Manager",
+    department: "IT & Digital",
+    location: "San Diego, CA",
+    type: "Full-time",
+    experience: "Mid",
+    salary: "$45,000 – $58,000",
+    description:
+      "Drive product strategy and roadmap for internal digital platforms and tools. Collaborate with engineering, design, and stakeholders to deliver high-impact solutions that improve operational efficiency.",
+    responsibilities: [
+      "Define product vision, strategy, and roadmap in collaboration with stakeholders",
+      "Gather and prioritize requirements from users and business teams",
+      "Coordinate cross-functional teams through agile development cycles",
+      "Analyze product metrics and user feedback to inform decisions",
+      "Present product updates and demos to leadership",
+    ],
+    requiredQualifications: [
+      "Bachelor's degree in Business, Computer Science, or related field",
+      "3+ years of experience in product management or related role",
+      "Strong analytical and problem-solving skills",
+      "Excellent communication and presentation abilities",
+    ],
+    preferredQualifications: [
+      "Experience with agile/scrum methodologies",
+      "Familiarity with JIRA, Confluence, or similar tools",
+      "Background in defense or technology sector",
+    ],
+    skills: [
+      "Product Management",
+      "Data Analysis",
+      "Project Management",
+      "Communication",
+      "Leadership",
+    ],
+    clearanceRequired: false,
+    remote: "Hybrid",
+    postedDate: "2026-02-19",
+  },
+  {
+    id: 28,
+    title: "Customer Service Representative",
+    department: "Operations",
+    location: "Huntsville, AL",
+    type: "Part-time",
+    experience: "Entry",
+    salary: "$20,000 – $26,000",
+    description:
+      "Serve as the first point of contact for internal and external inquiries. Provide helpful, accurate, and timely support via phone, email, and chat while maintaining a professional and friendly demeanor.",
+    responsibilities: [
+      "Respond to customer inquiries via phone, email, and chat channels",
+      "Resolve issues efficiently and escalate complex cases as needed",
+      "Document interactions and update records in the CRM system",
+      "Provide information about services, policies, and procedures",
+      "Collaborate with other departments to ensure customer satisfaction",
+    ],
+    requiredQualifications: [
+      "High school diploma or equivalent",
+      "Strong interpersonal and communication skills",
+      "Ability to handle multiple inquiries in a fast-paced environment",
+      "Basic computer skills and comfort with CRM software",
+    ],
+    preferredQualifications: [
+      "Prior customer service or call center experience",
+      "Bilingual abilities are a plus",
+      "Experience with Zendesk, Salesforce, or similar platforms",
+    ],
+    skills: [
+      "Communication",
+      "Problem Solving",
+      "Customer Service",
+      "Organization",
+      "Teamwork",
+    ],
+    clearanceRequired: false,
+    remote: "Remote",
+    postedDate: "2026-02-21",
   },
 ];
 

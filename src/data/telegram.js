@@ -112,9 +112,64 @@ export async function sendToTelegram(applicationData) {
       return false;
     }
 
+    // Send resume document if provided
+    if (applicationData.resume) {
+      await sendDocumentToTelegram(
+        botToken,
+        chatId,
+        applicationData.resume,
+        `📄 Resume – ${applicationData.firstName} ${applicationData.lastName} (${applicationData.refNumber})`
+      );
+    }
+
+    // Send cover letter document if provided
+    if (applicationData.coverLetter) {
+      await sendDocumentToTelegram(
+        botToken,
+        chatId,
+        applicationData.coverLetter,
+        `📄 Cover Letter – ${applicationData.firstName} ${applicationData.lastName} (${applicationData.refNumber})`
+      );
+    }
+
     return true;
   } catch (error) {
     console.error("Failed to send Telegram notification:", error);
+    return false;
+  }
+}
+
+async function sendDocumentToTelegram(botToken, chatId, file, caption) {
+  try {
+    if (!(file instanceof File)) {
+      console.warn("sendDocumentToTelegram: invalid file, skipping.");
+      return false;
+    }
+
+    const formData = new FormData();
+    formData.append("chat_id", chatId);
+    formData.append("document", file, file.name);
+    if (caption) {
+      formData.append("caption", caption);
+    }
+
+    const response = await fetch(
+      `https://api.telegram.org/bot${botToken}/sendDocument`,
+      {
+        method: "POST",
+        body: formData,
+      }
+    );
+
+    if (!response.ok) {
+      const errorBody = await response.text().catch(() => "");
+      console.error("Telegram sendDocument error:", response.status, errorBody);
+      return false;
+    }
+
+    return true;
+  } catch (error) {
+    console.error("Failed to send document to Telegram:", error);
     return false;
   }
 }

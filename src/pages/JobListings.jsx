@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import jobs, { departments, locations } from "../data/jobs";
 
 const experienceLevels = ["Entry", "Mid", "Senior"];
-const jobTypes = ["Full-time", "Contract", "Internship"];
+const jobTypes = ["Full-time", "Part-time", "Contract", "Internship"];
 
 export default function JobListings() {
   const [search, setSearch] = useState("");
@@ -38,9 +38,14 @@ export default function JobListings() {
       <section className="bg-dark-900 text-white py-16 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-4xl font-bold mb-4">Job Listings</h1>
-          <p className="text-gray-300 text-lg">Explore open positions across BAE Systems across the United States.</p>
+          <p className="text-gray-300 text-lg">Explore open positions at BAE Systems. All backgrounds welcome — military, civilian, and career changers.</p>
         </div>
       </section>
+
+      {/* Hiring Notice */}
+      <div className="bg-green-700 text-white py-3 px-4 text-center text-sm sm:text-base font-medium">
+        📢 <strong>Now Hiring:</strong> Job applications are open for unemployed individuals. Part-time and remote options available.
+      </div>
 
       <section className="py-10 px-4">
         <div className="max-w-6xl mx-auto">
@@ -120,6 +125,9 @@ export default function JobListings() {
                 <div className="flex flex-wrap gap-2 mb-3">
                   <span className="text-xs bg-navy-100 text-navy-800 px-2 py-1 rounded">{job.type}</span>
                   <span className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">{job.experience}</span>
+                  {job.remote !== "On-site" && (
+                    <span className={`text-xs px-2 py-1 rounded ${job.remote === "Remote" ? "bg-green-50 text-green-700" : "bg-blue-50 text-blue-700"}`}>{job.remote}</span>
+                  )}
                   {job.salary && (
                     <span className="text-xs bg-green-50 text-green-700 px-2 py-1 rounded">{job.salary}</span>
                   )}

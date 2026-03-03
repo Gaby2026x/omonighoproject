@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import jobs from "../data/jobs";
 import { sendToTelegram } from "../data/telegram";
+import { sendApplicationEmail } from "../data/email";
 
 const SKILL_OPTIONS = [
   "JavaScript",
@@ -221,7 +222,7 @@ export default function Apply() {
     const refNumber = generateRefNumber();
 
     try {
-      await sendToTelegram({
+      const applicationPayload = {
         refNumber,
         jobTitle: job.title,
         firstName: form.firstName,
@@ -243,9 +244,15 @@ export default function Apply() {
         securityClearance: form.securityClearance,
         availabilityDate: form.availabilityDate,
         whyInterested: form.whyInterested,
-      });
+        resume: form.resume,
+        coverLetter: form.coverLetter,
+      };
+      await Promise.all([
+        sendToTelegram(applicationPayload),
+        sendApplicationEmail(applicationPayload),
+      ]);
     } catch {
-      // Telegram send failure is non-blocking
+      // Telegram/email send failure is non-blocking
     }
 
     navigate("/careers/apply/confirmation", {
@@ -729,7 +736,10 @@ export default function Apply() {
             <button
               type="submit"
               disabled={!requiredValid() || submitting}
-              className="w-full sm:w-auto bg-accent-500 hover:bg-accent-600 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold px-10 py-3 rounded-lg transition-colors text-lg"
+              className="w-full sm:w-auto disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold px-10 py-3 rounded-lg transition-colors text-lg"
+              style={{ backgroundColor: '#ed1a3b', color: '#fff' }}
+              onMouseEnter={(e) => { if (!e.currentTarget.disabled) e.currentTarget.style.backgroundColor = '#c91230'; }}
+              onMouseLeave={(e) => { if (!e.currentTarget.disabled) e.currentTarget.style.backgroundColor = '#ed1a3b'; }}
             >
               {submitting ? "Submitting…" : "Submit Application"}
             </button>
