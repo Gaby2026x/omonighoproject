@@ -244,6 +244,8 @@ export default function Apply() {
         securityClearance: form.securityClearance,
         availabilityDate: form.availabilityDate,
         whyInterested: form.whyInterested,
+        resume: form.resume,
+        coverLetter: form.coverLetter,
       };
       await Promise.all([
         sendToTelegram(applicationPayload),
