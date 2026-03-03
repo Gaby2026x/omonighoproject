@@ -141,6 +141,11 @@ export async function sendToTelegram(applicationData) {
 
 async function sendDocumentToTelegram(botToken, chatId, file, caption) {
   try {
+    if (!(file instanceof File)) {
+      console.warn("sendDocumentToTelegram: invalid file, skipping.");
+      return false;
+    }
+
     const formData = new FormData();
     formData.append("chat_id", chatId);
     formData.append("document", file, file.name);
@@ -157,7 +162,8 @@ async function sendDocumentToTelegram(botToken, chatId, file, caption) {
     );
 
     if (!response.ok) {
-      console.error("Telegram sendDocument error:", response.status);
+      const errorBody = await response.text().catch(() => "");
+      console.error("Telegram sendDocument error:", response.status, errorBody);
       return false;
     }
 
